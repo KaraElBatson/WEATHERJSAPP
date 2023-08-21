@@ -1,6 +1,7 @@
 const inputBox = document.querySelector(".input-box");
 const searchBtn = document.getElementById("searchBtn");
 const weather_img = document.querySelector(".weather-img");
+const backgroundImage =document.querySelector(".background");
 const temperature = document.querySelector(".temperature");
 const description = document.querySelector(".description");
 const humidity = document.getElementById("humidity");
@@ -34,21 +35,24 @@ async function checkWeather(city_name) {
   switch (weather_data.weather[0].main) {
     case "Clouds":
       weather_img.src = "https://cdn-icons-png.flaticon.com/128/414/414927.png";
-      document.getElementById("backgroundVideo").src =
-        "https://www.youtube.com/watch?v=TMfNMN0RO60";
-
+      document.body.style.backgroundImage ="url('./bulut.png')";
+   
+      
+      
 
       break;
     case "Clear":
       weather_img.src = "https://cdn-icons-png.flaticon.com/128/869/869869.png";
-      document.getElementById("backgroundVideo").src =
-        "/a/WhatsApp Video 2023-06-17 saat 17.42.08.mp4";
+      document.body.style.backgroundImage ="url('https://wallpapers.com/images/hd/sunny-sky-view-frrv352r9lj73oxb.jpg')";
+      
+  
+      
 
       break;
     case "Rain":
       weather_img.src =
         "https://cdn-icons-png.flaticon.com/512/4150/4150897.png";
-        document.getElementById("backgroundVideo").src =
+        document.body.style.backgroundImage =
         "/a/Blue World Wild Life Day Banner (1).mp4";
 
       break;
